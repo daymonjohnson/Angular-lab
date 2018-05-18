@@ -1,0 +1,18 @@
+body{
+    background-color: palevioletred;
+}
+#container{
+    margin: auto 0;
+    background-color: white;
+    width: 50%;
+
+}
+.complete{
+    background-color: teal;
+    color: red;
+}
+.add{
+    
+    width: 90%;
+    margin: auto 0;
+}
