@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html ng-app="todoapp">
-  <head>
+
+<head>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-   <div id="container">
+</head>
+
+<body ng-app="">
+    <div id="container">
         <h1>TODO LIST</h1>
         <p>A place to store things you need to do!</p>
-        <input type="text" ng-model="name" placeholder="Filter your chores">
-  <div ng-controller="list as lists">
-      <ol>
-      <li ng-class="complete" ng-repeat ="chores in lists.chores"><button onclick="taskcompleted()" ng-model="complete" value="">Completed</button>{{chores}}</li>
-      </ol>
-      <input type="text" ng-model="name" placeholder="Add your chores">
-      <button class="add">Add</button>
-  </div>
-  </div>
+        <input type="text" placeholder="Filter your chores">
+        <div ng-controller="list as lists">
+            <ol>
+                <div ng-repeat="chores in lists.chores">
+                    <div ng-controller="complete" ng-hide="myvar">
+                        <li ng-class='{ li: true, completeClass: completeClass}'>
+                            <button class="butt" ng-click="taskCompleted()" value="complete">Completed</button>{{chores}}</li>
+                                <input type="button" value="x" ng-model="myvar"><input type="checkbox" ng-model="myvar">
+                    </div>
+                </div>
+            </ol>
+            <input type="text" ng-model="addChore" placeholder="Add your chores">
+            <button class="add">Add</button>
+        </div>
+        <input type="checkbox" ng-model="myvar">
+    </div>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js'></script>
     <script src="module.js"></script>
     <script src="todoApp.js"></script>
-  </body>
+</body>
+
 </html>

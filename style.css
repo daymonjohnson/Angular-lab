@@ -3,16 +3,27 @@ body{
 }
 #container{
     margin: auto 0;
-    background-color: white;
     width: 50%;
-
+    background-color: seashell;
 }
-.complete{
+.incomplete{
     background-color: teal;
     color: red;
 }
+.complete{
+color: seagreen;
+}
 .add{
-    
+
     width: 90%;
     margin: auto 0;
+}
+.completeClass{
+    text-decoration: line-through;
+}
+.completeClass .butt{
+    display: none;
+}
+.removeTask{
+    display: none;
 }

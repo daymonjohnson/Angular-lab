@@ -5,7 +5,3 @@
 }
 
 
- function taskcompleted(){
-     console.log("dog");
-     
-   }
