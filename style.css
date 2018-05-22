@@ -5,6 +5,7 @@ body{
     margin: auto 0;
     width: 50%;
     background-color: seashell;
+    justify-content: center;
 }
 .incomplete{
     background-color: teal;
@@ -26,4 +27,5 @@ color: seagreen;
 }
 .removeTask{
     display: none;
+    color: green;
 }
